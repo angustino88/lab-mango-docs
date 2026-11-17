@@ -1,0 +1,61 @@
+/*
+ * Lab Mango brand for the docs site. Values mirror src/shared/styles/tokens.css
+ * in the app (see docs/DESIGN_SYSTEM.md): neutral surfaces, one violet accent.
+ */
+:root {
+  --ifm-color-primary: #6d3fd6;
+  --ifm-color-primary-dark: #6133c8;
+  --ifm-color-primary-darker: #5b30bd;
+  --ifm-color-primary-darkest: #4b289b;
+  --ifm-color-primary-light: #7d55da;
+  --ifm-color-primary-lighter: #8560dc;
+  --ifm-color-primary-lightest: #9d80e3;
+  --ifm-background-color: #f6f5f9;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-font-color-base: #1a1723;
+  --ifm-toc-border-color: #e4e1ec;
+  --ifm-hr-border-color: #e4e1ec;
+  --ifm-font-family-base: 'Inter Variable', Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ifm-code-font-size: 92%;
+  --ifm-global-radius: 8px;
+  --docusaurus-highlighted-code-line-bg: rgba(109, 63, 214, 0.1);
+  --ifm-h1-font-size: 2.25rem;
+}
+
+html[data-theme='dark'] {
+  --ifm-color-primary: #a58cf0;
+  --ifm-color-primary-dark: #9475ed;
+  --ifm-color-primary-darker: #8b6aeb;
+  --ifm-color-primary-darkest: #7048e5;
+  --ifm-color-primary-light: #b6a3f3;
+  --ifm-color-primary-lighter: #beaef5;
+  --ifm-color-primary-lightest: #d9cff9;
+  --ifm-background-color: #0e0d13;
+  --ifm-background-surface-color: #16151d;
+  --ifm-font-color-base: #ecebf2;
+  --ifm-toc-border-color: #2c2a3a;
+  --ifm-hr-border-color: #2c2a3a;
+  --docusaurus-highlighted-code-line-bg: rgba(124, 92, 230, 0.2);
+}
+
+.navbar,
+.footer--light {
+  background-color: var(--ifm-background-surface-color);
+}
+
+.navbar {
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  box-shadow: none;
+}
+
+/* Wide spec tables scroll inside the article instead of widening the page. */
+.markdown table {
+  display: block;
+  overflow-x: auto;
+}
+
+/* Synced spec titles often contain long code paths; let them wrap at any character. */
+.markdown h1 code {
+  font-size: 0.8em;
+  overflow-wrap: anywhere;
+}
